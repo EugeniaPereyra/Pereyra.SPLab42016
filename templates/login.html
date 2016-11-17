@@ -1,0 +1,48 @@
+
+
+	<div class="container">
+	
+		<div class="CajaInicio animated bounceInRight">
+		<center>
+
+			<form id="FormIngreso" name="FormLogin" novalidate>
+
+				<center><h2 style="color:black">Login</h2></center><br><br>
+
+				<input type="email" name="email" ng-model="dato.usuario" placeholder="Ingrese email" required />
+				<span style="color:red" ng-show="FormLogin.email.$invalid">*</span> 
+
+				<br><br>
+				
+				<input type="text" name="nombre" ng-model="dato.nombre" placeholder="Ingrese su nombre" required />
+				<span style="color:red" ng-show="FormLogin.nombre.$invalid">*</span> 
+
+				<br><br>
+
+				<input style="color:black" type="password" name="clave" ng-model="dato.clave" placeholder="Ingrese password"  required />
+				<span style="color:red" ng-show="FormLogin.clave.$invalid">*</span>
+
+      			<br><br>
+
+				<input type="button" class="btn btn-danger" value="LOGIN" ng-disabled="FormLogin.$invalid" ng-click="Login()"/>
+
+				<br>
+
+				<span style="color:red" ng-show="FormLogin.$invalid">FALTAN DATOS!!</span>
+
+				</center>
+			</form>
+				<br>
+				<center>
+		        <td><button class='btn btn-warning' name='administrador' ng-click="Administrador()"><span class='glyphicon glyphicon-user'>&nbsp;</span>Administrador</button></td>
+		        &nbsp; &nbsp; &nbsp;
+
+		        <td><button class='btn btn-warning' name='encargado' ng-click="Vendedor()"><span class='glyphicon glyphicon-user'>&nbsp;</span>Vendedor</button></td>
+		        &nbsp; &nbsp; &nbsp;
+
+		        <td><button class='btn btn-warning' name='empleado' ng-click="Comprador()"><span class='glyphicon glyphicon-user'>&nbsp;</span>Comprador</button></td>
+				</center>
+			
+		</div>
+	</div>
+

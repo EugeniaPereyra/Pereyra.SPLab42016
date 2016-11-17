@@ -1,0 +1,22 @@
+    <div class="page-header">
+			<center><h1>Opciones</h1> </center>     
+		</div>
+
+        <div class="CajaInicio animated bounceInRight">
+        	<form id="FormIngreso" >
+         		
+         			<br/><center>
+                
+                    <a ng-hide="UsuarioLogueado.perfil=='comprador'" ng-click="IrAltaUsuario()"><h4>Nuevo usuario</h4></a>
+                
+                    <a ng-hide="UsuarioLogueado.perfil=='comprador' || UsuarioLogueado.perfil=='administrador'" ng-click="IrAltaProducto()" ><h4>Nuevo producto </h4></a>
+                
+                    <a ng-hide="UsuarioLogueado.perfil=='comprador' || UsuarioLogueado.perfil=='vendedor'" ng-click="IrGrillaUsuario()" ><h4>Ver usuarios</h4></a>
+                
+                    <a ng-hide="UsuarioLogueado.perfil=='administrador'" ng-click="IrGrillaProducto()" ><h4>Ver productos</h4></a>
+                
+            		<br/></center>
+        </form>
+      </div>
+
+	
